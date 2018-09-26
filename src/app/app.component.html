@@ -1,0 +1,20 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<div >
+<div class="w3-third">
+<h3><input [(ngModel)]="query" placeholder="search"></h3>
+<hr>
+<ul>
+<li *ngFor="let people of peoples| search:'id,name':query">
+                <nav><hr>
+                        <a [routerLink]="['/search',people.name]">{{people.name}}</a> 
+                       </nav>
+</li>
+</ul>
+</div>
+<router-outlet></router-outlet>
+                 
+                </div>
+                </body>
